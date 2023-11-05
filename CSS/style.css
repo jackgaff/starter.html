@@ -204,4 +204,8 @@ h3{
     p, li {
         font-size: 1.2em;
     }
+    #skip {
+        display: block;
+        top: 0;
+    }
 }
