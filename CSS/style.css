@@ -186,3 +186,22 @@ h3{
     font-size: medium;
     font-weight: bold;
 }
+
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .grid-container {
+        gap: 20px;
+    }
+    .grid-container > div {
+        padding: 30px;
+    }
+    nav ul li {
+        float: none;
+        width: 100%;
+    }
+    p, li {
+        font-size: 1.2em;
+    }
+}
