@@ -63,7 +63,7 @@ nav ul li a:hover {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
     padding: 10px;
-    background-color: #ff6347; /* Tomato color */
+    background-color: #ff6347;
 }
 
 .grid-container > div {
@@ -123,7 +123,7 @@ h1 {
 }
 
 body {
-    font-family: Arial, sans-serif; 
+    font-family: 'Roboto', sans-serif;
     background-color: #ff6347; 
     color: black; 
     padding: 20px;
@@ -221,4 +221,47 @@ body.dark-mode {
 
 .dark-mode .grid-container {
     background-color: #333;
+}
+
+#skip {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000;
+    color: #fff;
+    padding: 8px;
+    z-index: 100;
+    transition: top 1s ease-in-out;
+}
+
+#skip:focus {
+    top: 0;
+}
+
+@media screen and (min-width: 1200px) {
+    .grid-container {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 200px;
+    width: 100%;
+    background-image: url('../images/red.jpeg');
+    background-size: cover;
+    background-position: center;
+    z-index: -1; 
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
 }
